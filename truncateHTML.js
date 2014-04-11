@@ -14,7 +14,8 @@
         if(arguments[0]) userOptions[arguments[0]] = arguments[1];
         //grab the html and store it
         //prepare the user provided options
-        var html = $(this).html().trim(),
+        var $this = (this),
+            html = $this.html().trim(),
             //the container we'll use to store the tags
             tags = [],
             //when reinserting the tags we use this to keep track of the 
@@ -23,7 +24,9 @@
             defaults =  {
                 ellipsis: '...',
                 chararcters: html.length,
-                forceWord: false
+                forceWord: false,
+                after: 'read more',
+                animation: 'show'
             },
             options = $.extend(true, defaults, userOptions),
 
@@ -66,6 +69,10 @@
             }
             text = text.substr(0, position)+tag+text.substr(position);
         }
-        return text;
+        
+        //replace the html with two new containers
+        $this.html(text);
+        
+        return $this;
     };    
 })(jQuery);
