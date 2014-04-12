@@ -24,9 +24,7 @@
             defaults =  {
                 ellipsis: '...',
                 chararcters: html.length,
-                forceWord: false,
-                after: 'read more',
-                animation: 'show'
+                forceWord: false
             },
             options = $.extend(true, defaults, userOptions),
 
