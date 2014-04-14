@@ -46,7 +46,7 @@
             textArray.pop();
             text = textArray.join(SPACE);
         }
-
+        
         //add the ellipsis
         text += options.ellipsis;
   
@@ -56,7 +56,7 @@
         for(i=0; i<l; i++) {
             var position = tags[i][1],
                 tag = tags[i][0];
-            if(position > options.characters) { 
+            if(position > text.length) { 
                 var matches = /<(\/*)(\w+)/gi.exec(tag.split(SPACE).shift()),
                     tagname = matches[2].toLowerCase();
                 if($.inArray(tagname, conditionals) > -1) { tag = ''; }	
@@ -73,7 +73,7 @@
 		
         //replace the html within the container
         $this.html(text); 
-
+        
         return $this;
     };    
 })(jQuery);
