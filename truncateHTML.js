@@ -19,7 +19,7 @@
             tags = [],
             //the tags which are to be explicitly excluded when tags are reinserted
             //after truncating
-            conditionals = ['img', 'button', 'br', 'hr', 'input', 'textarea', 'video'],
+            conditionals = ['img', 'button', 'br', 'hr', 'input', 'video'],
             defaults =  {
                 ellipsis: '...',
                 chararcters: html.length,
