@@ -13,7 +13,7 @@
 
         if(arguments[0]) userOptions[arguments[0]] = arguments[1];
         //prepare the user provided options
-        var $this = (this),
+        var $this = $(this),
             html = $this.html().trim(),
             //the container we'll use to store the tags
             tags = [],
